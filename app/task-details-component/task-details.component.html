@@ -1,7 +1,14 @@
 <div *ngIf="task">
-  <h2>{{task.title}} details!</h2>
+  <h2>{{task.title}} details</h2>
+  <a (click)="deleteTask()">delete me</a>
   <div>
+    <label>done: </label>
+    <input [(ngModel)]="task.done" type="checkbox" placeholder="done"/>
+    <br>
     <label>name: </label>
     <input [(ngModel)]="task.title" placeholder="title" />
+    <br>
+    <label>content: </label>
+    <input [(ngModel)]="task.content" placeholder="content"/>
   </div>
 </div>

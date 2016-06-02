@@ -1,7 +1,7 @@
 <h3>Today Tasks</h3>
 <ul class="today-tasks">
   <div *ngFor="let task of tasks">
-    <li *ngIf="task.finishDate===getActualDate() && task.done===false" (click)="gotoDetail(task)">
+    <li *ngIf="task.finishDate===getActualDate() && task.done===false && task.deleted===false" (click)="gotoDetail(task)">
         {{task.title}}
      </li>
   </div>

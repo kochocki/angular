@@ -4,18 +4,21 @@ export class Task {
     title: string, 
     finishDate:string, 
     content: string, 
-    done: boolean  
+    done: boolean,
+    deleted: boolean
   ) { 
     this.id = id;
     this.title = title;
     this.finishDate = finishDate;
     this.content = content;
     this.done = done;
+    this.deleted = deleted;
   }
   
   id: number;
   title: string;
   finishDate: string;
   content: string;
-  done: boolean
+  done: boolean;
+  deleted: boolean;
 }

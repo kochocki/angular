@@ -8,10 +8,11 @@ import { TaskService } from '../task.service';
   templateUrl: 'app/task-details-component/task-details.component.html',
   providers: [ TaskService ]
 })
+
 export class TaskDetailsComponent implements OnInit {
   constructor(
     private taskService: TaskService,
-    private routeParams: RouteParams) { console.log("tu tez")}
+    private routeParams: RouteParams) { }
   task: Task;
   
 
@@ -20,5 +21,9 @@ export class TaskDetailsComponent implements OnInit {
     let id = +this.routeParams.get('id');
     this.taskService.getTask(id)
       .then(task => this.task = task);
+  }
+  
+  deleteTask() {
+    this.task.deleted = true;
   }
 }

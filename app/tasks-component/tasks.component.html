@@ -1,8 +1,16 @@
-<h3>All Tasks</h3>
+<h2>All Tasks</h2>
+
 <ul class="all-tasks">
+  <h3>todo</h3>
   <div *ngFor="let task of tasks">
-    <li (click)="gotoDetail(task)">
+    <li *ngIf="task.done===false && task.deleted===false" (click)="gotoDetail(task)">
         {{task.title}}
-     </li>
+    </li>
+  </div>
+  <h3>done</h3>
+  <div *ngFor="let task of tasks">
+    <li *ngIf="task.done===true && task.deleted===false" (click)="gotoDetail(task)">
+        {{task.title}}
+    </li>
   </div>
 </ul>
