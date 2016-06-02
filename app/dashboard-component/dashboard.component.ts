@@ -30,8 +30,15 @@ export class DashboardComponent implements OnInit {
     var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
+    if(dd<10) {
+      var ddString = '0' + dd.toString()
+    } 
+
+    if(mm<10) {
+      var mmString = '0' + mm.toString()
+    }  
     var yyyy = today.getFullYear();
-    console.log(dd+'/'+mm+'/'+yyyy);
-    return dd+'/'+mm+'/'+yyyy;
+    console.log("current date: "+ yyyy+'-'+mmString+'-'+ddString)
+    return yyyy+'-'+mmString+'-'+ddString;
   }
 }

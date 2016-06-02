@@ -4,6 +4,8 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
 import { TasksComponent } from './tasks-component/tasks.component';
 import { TaskDetailsComponent } from './task-details-component/task-datails.component';
 import { DashboardComponent } from './dashboard-component/dashboard.component';
+import { AddTaskComponent } from './add-task-component/add-task.component';
+
 @Component({
   selector: 'my-app',
   // templateUrl: './app.component.html'
@@ -11,6 +13,7 @@ import { DashboardComponent } from './dashboard-component/dashboard.component';
   <nav>
     <a [routerLink]="['Dashboard']">Dashboard</a>
     <a [routerLink]="['Tasks']">Tasks</a>
+    <a [routerLink]="['AddTask']">Add task</a>
   </nav>
   <router-outlet></router-outlet>`,
   directives: [ROUTER_DIRECTIVES, TasksComponent],
@@ -33,6 +36,11 @@ import { DashboardComponent } from './dashboard-component/dashboard.component';
     path: '/details/:id',
     name: 'TaskDetails',
     component: TaskDetailsComponent
+  }
+  {
+    path: '/add',
+    name: 'AddTask',
+    component: AddTaskComponent
   }
 ])
 

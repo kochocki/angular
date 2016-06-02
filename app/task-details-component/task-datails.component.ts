@@ -2,6 +2,7 @@ import { Component, Input, OnInit  } from '@angular/core';
 import { Task } from '../task';
 import { RouteParams } from '@angular/router-deprecated';
 import { TaskService } from '../task.service';
+
 @Component({
   selector: 'my-task-details',
   templateUrl: 'app/task-details-component/task-details.component.html',
@@ -12,6 +13,7 @@ export class TaskDetailsComponent implements OnInit {
     private taskService: TaskService,
     private routeParams: RouteParams) { console.log("tu tez")}
   task: Task;
+  
 
   ngOnInit() {
     console.log("tu tez")

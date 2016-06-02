@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>New task</h1>
+    <form>
+      <div class="form-group">
+        <label for="title">title</label>
+        <input [(ngModel)]="title" type="text" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="content">content</label>
+        <input [(ngModel)]="content" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="finishDate">finish date</label>
+        <input [(ngModel)]="finishDate "type="date" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-default" (click)="addNewTask()">Submit</button>
+    </form>
+</div>
