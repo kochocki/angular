@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
     private router: Router,
     private taskService: TaskService) { }
   tasks: Task[] = [];
+
   ngOnInit() {
     this.taskService.getTasks()
       .then(tasks => this.tasks = tasks);
@@ -21,5 +22,14 @@ export class DashboardComponent implements OnInit {
   gotoDetail(task: Task) {
     let link = ['TaskDetail', { id: task.id }];
     this.router.navigate(link);
+  }
+  
+  getActualDate() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    console.log(dd+'/'+mm+'/'+yyyy);
+    return dd+'/'+mm+'/'+yyyy;
   }
 }
