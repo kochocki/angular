@@ -8,16 +8,17 @@ import { Router } from '@angular/router-deprecated';
   templateUrl: 'app/dashboard-component/dashboard.component.html',
   providers: [ TaskService ]
 })
+
 export class DashboardComponent implements OnInit {
   constructor(
     private router: Router,
     private taskService: TaskService) { }
+    
   tasks: Task[] = [];
 
   ngOnInit() {
     this.taskService.getTasks()
       .then(tasks => this.tasks = tasks);
-  
   }
   
   gotoDetail(task: Task) {

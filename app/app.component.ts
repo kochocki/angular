@@ -31,12 +31,12 @@ import { DashboardComponent } from './dashboard-component/dashboard.component';
   },
   {
     path: '/details/:id',
-    name: 'TaskDetailsComponent',
+    name: 'TaskDetails',
     component: TaskDetailsComponent
   }
 ])
 
 export class AppComponent {
-  title = 'Recent tasks'
+  title = 'Tasker'
 
 }

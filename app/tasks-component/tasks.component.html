@@ -1,5 +1,8 @@
-<ul class="tasks">
-  <li *ngFor="let task of tasks">
-    <span class="badge">{{task.id}} </span>{{task.title}}
-  </li>
+<h3>All Tasks</h3>
+<ul class="all-tasks">
+  <div *ngFor="let task of tasks">
+    <li (click)="gotoDetail(task)">
+        {{task.title}}
+     </li>
+  </div>
 </ul>

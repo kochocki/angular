@@ -10,11 +10,11 @@ import { TaskService } from '../task.service';
 export class TaskDetailsComponent implements OnInit {
   constructor(
     private taskService: TaskService,
-    private routeParams: RouteParams) {
-    }
+    private routeParams: RouteParams) { console.log("tu tez")}
   task: Task;
 
   ngOnInit() {
+    console.log("tu tez")
     let id = +this.routeParams.get('id');
     this.taskService.getTask(id)
       .then(task => this.task = task);
