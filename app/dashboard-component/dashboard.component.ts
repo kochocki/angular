@@ -17,10 +17,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.taskService.getTasks()
       .then(tasks => this.tasks = tasks);
-      
+  
   }
+  
   gotoDetail(task: Task) {
-    let link = ['TaskDetail', { id: task.id }];
+    let link = ['TaskDetails', { id: task.id }];
     this.router.navigate(link);
   }
   

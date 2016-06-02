@@ -2,10 +2,11 @@ import { Inject } from '@angular/core';
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { TasksComponent } from './tasks-component/tasks.component';
+import { TaskDetailsComponent } from './task-details-component/task-datails.component';
 import { DashboardComponent } from './dashboard-component/dashboard.component';
 @Component({
   selector: 'my-app',
-  // templateUrl: 'app/app.component.html',
+  // templateUrl: './app.component.html'
   template: `<h1>{{title}}</h1>
   <nav>
     <a [routerLink]="['Dashboard']">Dashboard</a>
@@ -28,11 +29,11 @@ import { DashboardComponent } from './dashboard-component/dashboard.component';
     name: 'Tasks',
     component: TasksComponent
   },
-  // {
-  //   path: '/detail/:id',
-  //   name: 'HeroDetailComponent',
-  //   component: HeroDetailComponent
-  // }
+  {
+    path: '/details/:id',
+    name: 'TaskDetailsComponent',
+    component: TaskDetailsComponent
+  }
 ])
 
 export class AppComponent {
