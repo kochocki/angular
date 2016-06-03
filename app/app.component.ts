@@ -36,7 +36,7 @@ import { AddTaskComponent } from './add-task-component/add-task.component';
     path: '/details/:id',
     name: 'TaskDetails',
     component: TaskDetailsComponent
-  }
+  },
   {
     path: '/add',
     name: 'AddTask',
