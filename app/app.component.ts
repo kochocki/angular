@@ -5,7 +5,7 @@ import { TasksComponent } from './tasks-component/tasks.component';
 import { TaskDetailsComponent } from './task-details-component/task-datails.component';
 import { DashboardComponent } from './dashboard-component/dashboard.component';
 import { AddTaskComponent } from './add-task-component/add-task.component';
-
+import { DeleteAllComponent } from './delete-all-component/delete-all.component';
 @Component({
   selector: 'my-app',
   // templateUrl: './app.component.html'
@@ -14,6 +14,7 @@ import { AddTaskComponent } from './add-task-component/add-task.component';
     <a [routerLink]="['Dashboard']">Dashboard</a>
     <a [routerLink]="['Tasks']">Tasks</a>
     <a [routerLink]="['AddTask']">Add task</a>
+    <a [routerLink]="['DeleteAll']">Delete all</a>
   </nav>
   <router-outlet></router-outlet>`,
   directives: [ROUTER_DIRECTIVES, TasksComponent],
@@ -41,10 +42,14 @@ import { AddTaskComponent } from './add-task-component/add-task.component';
     path: '/add',
     name: 'AddTask',
     component: AddTaskComponent
+  },
+  {
+    path: '/deleteall',
+    name: 'DeleteAll',
+    component: DeleteAllComponent
   }
 ])
 
 export class AppComponent {
   title = 'Tasker'
-
 }
